@@ -81,7 +81,7 @@ public class DbSyncModule implements Module {
                 .put(MySQLAdapter.class.getName(), MySQLMergerTokenFactory.class)
                 .put(OpenBaseAdapter.class.getName(), OpenBaseMergerTokenFactory.class)
                 .put(OracleAdapter.class.getName(), OracleMergerTokenFactory.class)
-                .put(Oracle8Adapter.class.getName(), OracleMergerTokenFactory.class)
+                .put(OracleAdapter.class.getName(), OracleMergerTokenFactory.class)
                 .put(PostgresAdapter.class.getName(), PostgresMergerTokenFactory.class)
                 .put(SQLServerAdapter.class.getName(), SQLServerMergerTokenFactory.class)
                 .put(SybaseAdapter.class.getName(), SybaseMergerTokenFactory.class);

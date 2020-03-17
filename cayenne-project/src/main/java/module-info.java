@@ -6,5 +6,13 @@ module cayenneProject {
     requires java.sql;
     requires java.xml;
 
+    requires cayenneServer;
+    requires cayenneDI;
+    requires slf4j.api;
+
     exports org.apache.cayenne.project;
+    exports org.apache.cayenne.project.extension;
+    exports org.apache.cayenne.project.extension.info;
+    exports org.apache.cayenne.project.validation;
+    exports org.apache.cayenne.project.upgrade;
 }
