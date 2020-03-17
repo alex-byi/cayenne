@@ -19,6 +19,11 @@
 		<version>4.2.M1-SNAPSHOT</version>
 	</parent>
 
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
 	<artifactId>cayenne-modeler-generic</artifactId>
 	<name>cayenne-modeler-generic: Modeler Generic Assembly</name>
 	<packaging>jar</packaging>

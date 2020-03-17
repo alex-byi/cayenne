@@ -27,6 +27,11 @@
         <version>4.2.M1-SNAPSHOT</version>
     </parent>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <name>cayenne-modeler-win-ext: Modeler Win Extensions</name>
     <packaging>jar</packaging>
     <artifactId>cayenne-modeler-win-ext</artifactId>

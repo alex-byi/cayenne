@@ -24,6 +24,12 @@
 		<version>4.2.M1-SNAPSHOT</version>
 	</parent>
 
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
+
 	<artifactId>cayenne-wocompat</artifactId>
 	<name>cayenne-wocompat: WebObjects Compatibility Library</name>
 	<packaging>jar</packaging>
