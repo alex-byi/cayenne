@@ -20,6 +20,11 @@
 	<packaging>jar</packaging>
 	<name>cayenne-di: Cayenne Dependency Injection Container</name>
 	<description>Cayenne Dependency Injection Container</description>
+
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>

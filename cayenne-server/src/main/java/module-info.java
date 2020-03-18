@@ -52,4 +52,27 @@ module cayenneServer {
     exports org.apache.cayenne.exp.parser;
     exports org.apache.cayenne.exp.property;
     exports org.apache.cayenne.access.dbsync;
+
+    exports org.apache.cayenne.cache;
+    exports org.apache.cayenne.tx;
+    exports org.apache.cayenne.ashwood;
+    exports org.apache.cayenne.access.translator.select;
+    exports org.apache.cayenne.access.jdbc.reader;
+    exports org.apache.cayenne.template;
+
+    exports org.apache.cayenne.graph;
+    exports org.apache.cayenne.access.event;
+    exports org.apache.cayenne.access.jdbc;
+
+    opens org.apache.cayenne.access;
+    opens org.apache.cayenne.access.flush;
+    opens org.apache.cayenne.configuration.server;
+    opens org.apache.cayenne.configuration;
+
+    opens org.apache.cayenne.dba;
+    opens org.apache.cayenne.access.dbsync;
+    opens org.apache.cayenne.configuration.xml;
+    opens org.apache.cayenne.tx;
+
+
 }

@@ -18,4 +18,8 @@ module cayenneModeler {
     requires ognl;
 
     exports org.slf4j.impl;
+    exports org.apache.cayenne.modeler.action;
+    exports org.apache.cayenne.modeler;
+    exports org.apache.cayenne.modeler.init.platform;
+    exports org.apache.cayenne.modeler.util;
 }

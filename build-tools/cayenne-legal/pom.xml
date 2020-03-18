@@ -32,6 +32,11 @@
 	<description>Cayenne License and Notice Bundle</description>
 	<packaging>jar</packaging>
 
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
 	<build>
 		<resources>
 			<!-- replace variables here, as maven-remote-resources-plugin is not always used to include stuff -->

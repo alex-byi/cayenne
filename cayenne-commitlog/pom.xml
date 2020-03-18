@@ -26,6 +26,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <artifactId>cayenne-commitlog</artifactId>
     <name>cayenne-commitlog: Cayenne Commit Log Module</name>
     <packaging>jar</packaging>

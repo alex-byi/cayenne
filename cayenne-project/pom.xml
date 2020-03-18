@@ -28,6 +28,11 @@
     <name>cayenne-project: Cayenne Project</name>
     <packaging>jar</packaging>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <!-- Compile dependencies -->
         <dependency>

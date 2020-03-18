@@ -30,6 +30,11 @@
     <name>cayenne-jgroups: Cayenne JGroups Event bridge</name>
     <packaging>jar</packaging>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>jgroups</groupId>

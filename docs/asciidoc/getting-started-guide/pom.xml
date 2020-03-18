@@ -31,6 +31,11 @@
     <packaging>jar</packaging>
     <name>getting-started-guide: AsciiDoc - Getting Started with Cayenne</name>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <build>
         <plugins>
             <plugin>

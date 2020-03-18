@@ -34,6 +34,8 @@
         <jcache-version>1.0.0</jcache-version>
         <ehcache-version>3.8.1</ehcache-version>
         <jaxb-api-version>2.3.1</jaxb-api-version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencyManagement>

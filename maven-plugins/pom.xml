@@ -21,6 +21,11 @@
 	<name>cayenne-maven-plugins-parent: Maven Plugins parent</name>
 	<packaging>pom</packaging>
 
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
 	<modules>
 		<module>cayenne-maven-plugin</module>
 		<module>cayenne-modeler-maven-plugin</module>

@@ -27,6 +27,11 @@
 		<version>4.2.M1-SNAPSHOT</version>
 	</parent>
 
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
 	<description>Common Unit Test Utilities</description>
 	<artifactId>cayenne-test-utilities</artifactId>
 	<name>cayenne-test-utilities: Common Unit Test Utilities</name>

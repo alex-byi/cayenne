@@ -30,6 +30,11 @@
     <packaging>jar</packaging>
     <name>cayenne-cgen: Cayenne Class Generation Tools</name>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <!--
         using org.apache.cayenne.project.validation.NameValidationHelper from cayenne-project

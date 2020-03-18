@@ -29,6 +29,10 @@
     <artifactId>cayenne-jms</artifactId>
     <name>cayenne-jms: Cayenne JMS Event bridge</name>
     <packaging>jar</packaging>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>

@@ -30,6 +30,11 @@
     <packaging>jar</packaging>
     <name>${project.artifactId}: AsciiDoc - Getting Started with Cayenne ROP (Remote Object Persistence)</name>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <build>
         <plugins>
             <plugin>

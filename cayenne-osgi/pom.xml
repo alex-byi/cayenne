@@ -27,6 +27,11 @@
 
     <artifactId>cayenne-osgi</artifactId>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.cayenne</groupId>

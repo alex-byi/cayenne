@@ -24,6 +24,11 @@
 	<artifactId>tutorial-rop-client</artifactId>
 	<name>tutorial-rop-client: Cayenne ROP Client Tutorial</name>
 
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.cayenne</groupId>

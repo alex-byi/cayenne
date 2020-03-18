@@ -22,6 +22,8 @@
 
     <properties>
         <protostuff.version>1.5.5</protostuff.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencyManagement>

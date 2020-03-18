@@ -24,6 +24,8 @@
 
     <properties>
         <jetty.version>9.4.7.v20170914</jetty.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencyManagement>

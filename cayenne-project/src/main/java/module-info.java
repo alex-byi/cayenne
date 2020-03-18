@@ -15,4 +15,6 @@ module cayenneProject {
     exports org.apache.cayenne.project.extension.info;
     exports org.apache.cayenne.project.validation;
     exports org.apache.cayenne.project.upgrade;
+
+    opens org.apache.cayenne.project.validation;
 }

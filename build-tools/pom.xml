@@ -27,6 +27,11 @@
 		<version>4.2.M1-SNAPSHOT</version>
 	</parent>
 
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
 	<groupId>org.apache.cayenne.build-tools</groupId>
 	<artifactId>build-tools-parent</artifactId>
 	<name>build-tools-parent: Cayenne Build Tools Parent</name>
