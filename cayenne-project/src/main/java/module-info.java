@@ -17,4 +17,5 @@ module cayenneProject {
     exports org.apache.cayenne.project.upgrade;
 
     opens org.apache.cayenne.project.validation;
+    opens org.apache.cayenne.project to cayenneDI;
 }

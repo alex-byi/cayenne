@@ -74,5 +74,5 @@ module cayenneServer {
     opens org.apache.cayenne.configuration.xml;
     opens org.apache.cayenne.tx;
 
-
+    uses org.apache.cayenne.configuration.server.CayenneServerModuleProvider;
 }

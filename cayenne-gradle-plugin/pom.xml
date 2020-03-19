@@ -33,8 +33,6 @@
     <name>cayenne-gradle-plugin: Cayenne Gradle Plugin</name>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
         <gradle.executable>./gradlew</gradle.executable>
         <gradle.task>build</gradle.task>
     </properties>
@@ -164,11 +162,6 @@
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>3.0.2</version>
         </dependency>
     </dependencies>
 

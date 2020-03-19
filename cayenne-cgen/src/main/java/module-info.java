@@ -16,4 +16,7 @@ module cayenneCgen {
     requires cayenneDBSync;
     requires velocity.engine.core;
     requires velocity.tools.generic;
+
+    opens org.apache.cayenne.gen;
+
 }
