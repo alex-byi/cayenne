@@ -19,4 +19,8 @@ module cayenneCgen {
 
     opens org.apache.cayenne.gen;
 
+    provides org.apache.cayenne.tools.CayenneToolsModuleProvider with org.apache.cayenne.gen.CgenToolsModuleProvider;
+
+
+
 }

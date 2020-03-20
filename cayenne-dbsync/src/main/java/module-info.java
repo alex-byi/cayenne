@@ -24,4 +24,9 @@ module cayenneDBSync {
     exports org.apache.cayenne.dbsync.merge.token;
     exports org.apache.cayenne.dbsync.merge;
     exports org.apache.cayenne.dbsync.merge.token.db;
+
+    provides org.apache.cayenne.configuration.server.CayenneServerModuleProvider with org.apache.cayenne.dbsync.DbSyncServerModuleProvider;
+
+    opens org.apache.cayenne.dbsync.xml to cayenneDI;
+
 }

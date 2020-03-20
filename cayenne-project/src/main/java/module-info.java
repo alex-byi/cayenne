@@ -18,4 +18,9 @@ module cayenneProject {
 
     opens org.apache.cayenne.project.validation;
     opens org.apache.cayenne.project to cayenneDI;
+
+    uses org.apache.cayenne.di.spi.ModuleProvider;
+
+    provides org.apache.cayenne.configuration.server.CayenneServerModuleProvider with org.apache.cayenne.project.ProjectServerModuleProvider;
+
 }

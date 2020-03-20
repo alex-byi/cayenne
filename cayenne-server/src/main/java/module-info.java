@@ -75,4 +75,39 @@ module cayenneServer {
     opens org.apache.cayenne.tx;
 
     uses org.apache.cayenne.configuration.server.CayenneServerModuleProvider;
+
+    uses org.apache.cayenne.di.spi.ModuleProvider;
+
+    provides org.apache.cayenne.di.spi.ModuleProvider with org.apache.cayenne.configuration.server.MainCayenneServerModuleProvider;
+
+    provides org.apache.cayenne.configuration.server.CayenneServerModuleProvider with org.apache.cayenne.configuration.server.MainCayenneServerModuleProvider;
 }
+
+/*
+Exception in thread "main" java.util.ServiceConfigurationError: com.mydeveloperplanet.serviceproviderinterface.spi.ServiceProviderInterface: module com.mydeveloperplanet.serviceproviderinterface does
+ not declare `uses`
+ at java.base/java.util.ServiceLoader.fail(ServiceLoader.java:588)
+ at java.base/java.util.ServiceLoader.checkCaller(ServiceLoader.java:574)
+ at java.base/java.util.ServiceLoader.<init>(ServiceLoader.java:503)
+ at java.base/java.util.ServiceLoader.load(ServiceLoader.java:1684)
+ at com.mydeveloperplanet.serviceproviderinterface/com.mydeveloperplanet.serviceproviderinterface.Service.printServiceNames(Service.java:25)
+ at com.mydeveloperplanet.jpmshello/com.mydeveloperplanet.jpmshello.HelloModules.checkProvidesWith(HelloModules.java:48)
+ at com.mydeveloperplanet.jpmshello/com.mydeveloperplanet.jpmshello.HelloModules.main(HelloModules.java:21)
+
+
+Add the provides...with directive to the module-info.java of com.mydeveloperplanet.serviceprovider1. After provides, we add the interface. After with, we add the implementation:
+
+module com.mydeveloperplanet.serviceprovider1 {
+    requires com.mydeveloperplanet.serviceproviderinterface;
+    provides com.mydeveloperplanet.serviceproviderinterface.spi.ServiceProviderInterface with com.mydeveloperplanet.serviceprovider1.ServiceProvider1;
+}
+
+
+Add the uses directive to the module-info of com.mydeveloperplanet.serviceproviderinterface. After uses, we add the interface:
+
+module com.mydeveloperplanet.serviceproviderinterface {
+    exports com.mydeveloperplanet.serviceproviderinterface.spi;
+    exports com.mydeveloperplanet.serviceproviderinterface;
+    uses com.mydeveloperplanet.serviceproviderinterface.spi.ServiceProviderInterface;
+}
+* */
