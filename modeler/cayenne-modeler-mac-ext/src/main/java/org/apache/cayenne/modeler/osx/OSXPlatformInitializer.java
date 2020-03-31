@@ -42,7 +42,7 @@ import org.apache.cayenne.modeler.action.ConfigurePreferencesAction;
 import org.apache.cayenne.modeler.action.ExitAction;
 import org.apache.cayenne.modeler.init.platform.PlatformInitializer;
 
-import com.apple.eawt.Application;
+//import com.apple.eawt.Application;
 
 public class OSXPlatformInitializer implements PlatformInitializer {
 
@@ -55,7 +55,7 @@ public class OSXPlatformInitializer implements PlatformInitializer {
         overrideUIDefaults();
 
         // configure special Mac menu handlers
-        OSXApplicationWrapper wrapper = new OSXApplicationWrapper(Application.getApplication());
+       /* OSXApplicationWrapper wrapper = new OSXApplicationWrapper(Application.getApplication());
         wrapper.setAboutHandler(()
                 -> actionManager.getAction(AboutAction.class).showAboutDialog());
 
@@ -68,7 +68,7 @@ public class OSXPlatformInitializer implements PlatformInitializer {
             } else {
                 r.performQuit();
             }
-        });
+        });*/
     }
 
     private void overrideUIDefaults() {

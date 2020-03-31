@@ -1,4 +1,4 @@
-module cayenneModeler {
+module cayenneModelerMacExt {
     requires org.slf4j;
     requires java.desktop;
     requires java.base;
@@ -16,10 +16,6 @@ module cayenneModeler {
     requires jgraph;
     requires cayenneWocompat;
     requires ognl;
+    requires cayenneModeler;
 
-    exports org.slf4j.impl;
-    exports org.apache.cayenne.modeler.action;
-    exports org.apache.cayenne.modeler;
-    exports org.apache.cayenne.modeler.init.platform;
-    exports org.apache.cayenne.modeler.util;
 }

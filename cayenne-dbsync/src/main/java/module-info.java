@@ -1,5 +1,5 @@
-module cayenneDBSync {
-    requires slf4j.api;
+open module cayenneDBSync {
+    requires org.slf4j;
     requires java.desktop;
     requires java.base;
     requires java.datatransfer;
@@ -26,7 +26,4 @@ module cayenneDBSync {
     exports org.apache.cayenne.dbsync.merge.token.db;
 
     provides org.apache.cayenne.configuration.server.CayenneServerModuleProvider with org.apache.cayenne.dbsync.DbSyncServerModuleProvider;
-
-    opens org.apache.cayenne.dbsync.xml to cayenneDI;
-
 }

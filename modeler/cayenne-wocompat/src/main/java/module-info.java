@@ -1,6 +1,6 @@
 module cayenneWocompat {
     exports org.apache.cayenne.wocompat;
-    requires slf4j.api;
+    requires org.slf4j;
     requires java.desktop;
     requires java.base;
     requires java.datatransfer;

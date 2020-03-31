@@ -38,7 +38,7 @@
 		<maven.build.timestamp.format>MMM dd yyyy HH:mm:ss</maven.build.timestamp.format>
 		<project.build.datetime>${maven.build.timestamp}</project.build.datetime>
         <jacoco.version>0.7.9</jacoco.version>
-		<slf4j.version>1.7.25</slf4j.version>
+		<slf4j.version>1.8.0-beta4</slf4j.version>
 		<ant.version>1.10.7</ant.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,7 +48,7 @@
 	<url>https://cayenne.apache.org/</url>
 	<modules>
 		<module>build-tools</module>
-		<module>cayenne-ant</module>
+<!--		<module>cayenne-ant</module>-->
 		<module>cayenne-cache-invalidation</module>
 		<module>cayenne-cgen</module>
 		<module>cayenne-client</module>
@@ -58,7 +58,6 @@
 		<module>cayenne-dbcp2</module>
 		<module>cayenne-dbsync</module>
 		<module>cayenne-di</module>
-		<module>cayenne-gradle-plugin</module>
 		<module>cayenne-jcache</module>
 		<module>cayenne-joda</module>
 		<module>cayenne-lifecycle</module>
@@ -76,8 +75,9 @@
 		<module>maven-plugins</module>
 		<module>modeler</module>
 		<module>tutorials</module>
-		<module>docs</module>
+<!--		<module>docs</module>-->
 		<module>assembly</module>
+		<module>jlink</module>
 	</modules>
 	<issueManagement>
 		<system>jira</system>
@@ -337,7 +337,7 @@
 			<dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-dbcp2</artifactId>
-                <version>2.2.0</version>
+                <version>2.7.0</version>
             </dependency>
             <dependency>
                 <groupId>com.caucho</groupId>
@@ -358,13 +358,13 @@
 			<dependency>
 				<groupId>com.mockrunner</groupId>
 				<artifactId>mockrunner-jdbc</artifactId>
-				<version>2.0.1</version>
+				<version>2.0.4</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>com.mockrunner</groupId>
 				<artifactId>mockrunner-servlet</artifactId>
-				<version>2.0.1</version>
+				<version>2.0.4</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
@@ -381,7 +381,7 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
-				<version>1.2.6</version>
+				<version>5.2.4.RELEASE</version>
 				<scope>test</scope>
 				<exclusions>
 					<exclusion>
@@ -403,18 +403,18 @@
 			<dependency>
 				<groupId>org.apache.velocity</groupId>
 				<artifactId>velocity-engine-core</artifactId>
-				<version>2.1</version>
+				<version>2.2</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.velocity.tools</groupId>
 				<artifactId>velocity-tools-generic</artifactId>
 				<version>3.0</version>
 			</dependency>
-			<dependency>
+<!--			<dependency>
 				<groupId>foundrylogic.vpp</groupId>
 				<artifactId>vpp</artifactId>
 				<version>2.2.1</version>
-			</dependency>
+			</dependency>-->
 			<dependency>
 				<groupId>jgraph</groupId>
 				<artifactId>jgraph</artifactId>
@@ -428,19 +428,19 @@
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.12</version>
+				<version>4.13</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-core</artifactId>
-				<version>3.3.0</version>
+				<version>3.3.3</version>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>net.sf.ehcache</groupId>
 				<artifactId>ehcache-core</artifactId>
-				<version>2.4.3</version>
+				<version>2.6.11</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
@@ -452,7 +452,7 @@
 			<dependency>
             	<groupId>org.apache.derby</groupId>
             	<artifactId>derby</artifactId>
-            	<version>10.14.2.0</version>
+            	<version>10.15.2.0</version>
             	<scope>test</scope>
         	</dependency>
         	<dependency>
@@ -500,7 +500,7 @@
 	</dependencyManagement>
 
 	<repositories>
-		<repository>
+	<!--	<repository>
 			<id>objectstyle</id>
 			<name>ObjectStyle Repository</name>
 			<url>https://maven.objectstyle.org/nexus/content/groups/cayenne-deps</url>
@@ -511,7 +511,7 @@
 			<releases>
 				<enabled>true</enabled>
 			</releases>
-		</repository>
+		</repository>-->
 		<repository>
 			<id>apache.snapshots</id>
 			<name>Apache Snapshot Repository</name>
@@ -522,7 +522,7 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
-		<pluginRepository>
+<!--		<pluginRepository>
 			<id>objectstyle</id>
 			<name>ObjectStyle repository</name>
 			<url>https://maven.objectstyle.org/nexus/content/groups/cayenne-deps</url>
@@ -532,6 +532,14 @@
 			</snapshots>
 			<releases>
 				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>-->
+		<pluginRepository>
+			<id>apache.snapshots</id>
+			<name>Apache Snapshot Repository</name>
+			<url>https://repository.apache.org/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
@@ -728,12 +736,41 @@
 					<version>3.1.0</version>
 				</plugin>
 				<plugin>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>3.1.2</version>
+					<executions>
+						<execution>
+							<id>tree</id>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>tree</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.1</version>
 					<configuration>
-						<source>11</source>
-						<target>11</target>
+						<source>9</source>
+						<target>9</target>
 						<encoding>UTF-8</encoding>
+<!--						<compilerArgs>
+							<arg>&#45;&#45;add-exports</arg><arg>forms/com.jgoodies.forms.builder=cayenneModeler</arg>
+							<arg>&#45;&#45;add-exports</arg><arg>forms/com.jgoodies.forms.layout=cayenneModeler</arg>
+							<arg>&#45;&#45;add-exports</arg><arg>forms/com.jgoodies.forms.factories=cayenneModeler</arg>
+
+							<arg>&#45;&#45;add-exports</arg><arg>velocity.tools.generic/org.apache.velocity.tools=cayenneCgen</arg>
+
+							<arg>&#45;&#45;add-exports</arg><arg>velocity.engine.core/org.apache.velocity.context=cayenneCgen</arg>
+							<arg>&#45;&#45;add-exports</arg><arg>velocity.engine.core/org.apache.velocity=cayenneCgen</arg>
+							<arg>&#45;&#45;add-exports</arg><arg>velocity.engine.core/org.apache.velocity.app=cayenneCgen</arg>
+							<arg>&#45;&#45;add-exports</arg><arg>velocity.engine.core/org.apache.velocity.exception=cayenneCgen</arg>
+							<arg>&#45;&#45;add-exports</arg><arg>velocity.engine.core/org.apache.velocity.runtime.resource.loader=cayenneCgen</arg>
+							<arg>&#45;&#45;add-exports</arg><arg>velocity.engine.core/org.apache.velocity.context=cayenneCgen</arg>
+
+&lt;!&ndash;							<arg>&#45;&#45;add-exports</arg><arg>velocity.tools.generic/org.apache.velocity.context=cayenneCgen</arg>&ndash;&gt;
+						</compilerArgs>-->
 					</configuration>
 				</plugin>
 				<plugin>
@@ -874,7 +911,13 @@
             </plugins>
 		</pluginManagement>
 
+
 		<plugins>
+			<plugin>
+				<artifactId>maven-jlink-plugin</artifactId>
+				<version>3.0.0-alpha-2-SNAPSHOT</version>
+				<extensions>true</extensions>
+			</plugin>
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
 				<executions>

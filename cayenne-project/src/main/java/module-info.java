@@ -8,7 +8,7 @@ module cayenneProject {
 
     requires cayenneServer;
     requires cayenneDI;
-    requires slf4j.api;
+    requires org.slf4j;
 
     exports org.apache.cayenne.project;
     exports org.apache.cayenne.project.extension;

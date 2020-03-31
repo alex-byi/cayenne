@@ -2,7 +2,7 @@ module cayenneCgen {
     exports org.apache.cayenne.gen.xml;
     exports org.apache.cayenne.gen;
     exports org.apache.cayenne.tools;
-    requires slf4j.api;
+    requires org.slf4j;
     requires java.desktop;
     requires java.base;
     requires java.datatransfer;
