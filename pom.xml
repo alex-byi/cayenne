@@ -411,11 +411,6 @@
 				<version>3.0</version>
 			</dependency>
 			<dependency>
-				<groupId>foundrylogic.vpp</groupId>
-				<artifactId>vpp</artifactId>
-				<version>2.2.1</version>
-			</dependency>
-			<dependency>
 				<groupId>jgraph</groupId>
 				<artifactId>jgraph</artifactId>
 				<version>5.13.0.0</version>
@@ -501,18 +496,6 @@
 
 	<repositories>
 		<repository>
-			<id>objectstyle</id>
-			<name>ObjectStyle Repository</name>
-			<url>https://maven.objectstyle.org/nexus/content/groups/cayenne-deps</url>
-			<layout>default</layout>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
 			<id>apache.snapshots</id>
 			<name>Apache Snapshot Repository</name>
 			<url>https://repository.apache.org/snapshots</url>
@@ -521,20 +504,6 @@
 			</releases>
 		</repository>
 	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>objectstyle</id>
-			<name>ObjectStyle repository</name>
-			<url>https://maven.objectstyle.org/nexus/content/groups/cayenne-deps</url>
-			<layout>default</layout>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</pluginRepository>
-	</pluginRepositories>
 	<build>
 		<defaultGoal>install</defaultGoal>
 
